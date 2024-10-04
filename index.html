@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Florería Melvin</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Florería Melvin</h1>
+      <nav>
+        <a href="#productos">Catálogo de Productos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Atención al Cliente</a>
+      </nav>
+    </header>
+
+    <section id="productos" class="catalogo">
+      <h2>Nuestros Productos</h2>
+      <div class="producto">
+        <img src="rosas.jpg" alt="Rosas" />
+        <h3>Rosas</h3>
+        <p>$15 por docena</p>
+      </div>
+      <div class="producto">
+        <img src="tulipanes.jpg" alt="Tulipanes" />
+        <h3>Tulipanes</h3>
+        <p>$12 por docena</p>
+      </div>
+      <!-- Añade más productos aquí -->
+    </section>
+
+    <section id="servicios" class="servicios">
+      <h2>Servicios Delivery</h2>
+      <p>
+        Ofrecemos entrega a domicilio de nuestros productos. ¡Lleva la belleza
+        de nuestras flores directamente a tu puerta!
+      </p>
+    </section>
+
+    <section id="ubicacion">
+      <h2>Nuestra Ubicación</h2>
+      <div id="mapa"></div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Atención al Cliente</h2>
+      <form id="form-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="respuesta"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Florería Bella Flor. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

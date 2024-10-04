@@ -3,18 +3,14 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8;
+    background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
 }
 
-h1, h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-}
-
+/* Encabezado */
 header {
-    background-color: #ff6f61;
+    background: linear-gradient(90deg, #ff4081, #ff6f61);
     color: white;
     padding: 20px;
     text-align: center;
@@ -22,43 +18,49 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-bottom: 5px solid #ffdbd1;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-nav {
-    margin-top: 10px;
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff, 0 0 20px #ffdbd1, 0 0 30px #ff6f61; }
+    to { text-shadow: 0 0 20px #fff, 0 0 30px #ff6f61, 0 0 40px #ff4081; }
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
+    margin: 0 20px;
+    font-size: 1.3em;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffdbd1;
+    color: #ffff82;
 }
 
-/* Sección Catálogo */
+/* Sección de productos */
 #productos {
-    padding: 50px 20px;
-    background-color: #ffffff;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ff6f61, #ffdbd1);
+    text-align: center;
+    color: white;
 }
 
 .catalogo h2 {
-    text-align: center;
-    font-size: 2.2em;
-    margin-bottom: 40px;
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 .producto {
@@ -66,82 +68,86 @@ nav a:hover {
     width: 30%;
     margin: 15px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     overflow: hidden;
+    position: relative;
 }
 
 .producto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .producto img {
     width: 100%;
-    border-bottom: 5px solid #ff6f61;
+    border-bottom: 5px solid #ff4081;
 }
 
 .producto h3 {
-    font-size: 1.8em;
-    color: #ff6f61;
-    margin: 10px 0;
+    font-size: 2em;
+    color: #ff4081;
+    margin: 15px 0;
 }
 
 .producto p {
-    font-size: 1.1em;
-    color: #777;
-    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-/* Sección Servicios */
+/* Sección de servicios */
 #servicios {
-    padding: 50px 20px;
+    padding: 60px 20px;
     background-color: #f7f7f7;
     text-align: center;
 }
 
 .servicios h2 {
-    font-size: 2.2em;
+    font-size: 2.8em;
     margin-bottom: 20px;
+    color: #ff4081;
 }
 
 .servicios p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     max-width: 600px;
     margin: 0 auto;
-    color: #555;
+    color: #444;
+    line-height: 1.8;
 }
 
-/* Sección Ubicación */
+/* Sección de ubicación */
 #ubicacion {
-    padding: 50px 20px;
+    padding: 60px 20px;
     background-color: #ffffff;
     text-align: center;
 }
 
 #ubicacion h2 {
-    font-size: 2.2em;
+    font-size: 2.8em;
     margin-bottom: 20px;
+    color: #ff6f61;
 }
 
 #mapa {
     width: 100%;
-    height: 400px;
+    height: 450px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Sección Contacto */
+/* Sección de contacto */
 #contacto {
-    padding: 50px 20px;
-    background-color: #ff6f61;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ff4081, #ff6f61);
     color: white;
     text-align: center;
 }
 
 #contacto h2 {
-    font-size: 2.2em;
+    font-size: 2.8em;
     margin-bottom: 20px;
 }
 
@@ -151,53 +157,42 @@ form {
 }
 
 form label {
-    font-size: 1.1em;
+    font-size: 1.3em;
     text-align: left;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 form input, form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 1em;
+    border-radius: 10px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-form input[type="text"], form input[type="email"] {
-    background-color: #f7f7f7;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-form textarea {
-    height: 150px;
-    background-color: #f7f7f7;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+form input[type="text"], form input[type="email"], form textarea {
+    background-color: #fff;
 }
 
 button {
-    background-color: white;
-    color: #ff6f61;
-    padding: 15px 30px;
+    background-color: #ffff82;
+    color: #ff4081;
+    padding: 15px 40px;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
+    border-radius: 30px;
+    font-size: 1.4em;
     cursor: pointer;
     text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s;
 }
 
 button:hover {
     background-color: #ffdbd1;
-    color: #ff6f61;
-}
-
-#respuesta {
-    margin-top: 20px;
-    font-size: 1.1em;
-    color: #fff;
+    color: #ff4081;
+    transform: scale(1.1);
 }
 
 /* Footer */
@@ -223,3 +218,15 @@ footer p {
 section {
     animation: fadeIn 1s ease-in-out;
 }
+
+/* Animaciones especiales */
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    80% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.producto {
+    animation: bounceIn 0.8s ease-in-out;
+}
+

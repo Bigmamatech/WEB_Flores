@@ -1,8 +1,8 @@
 /* Estilo general */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;  /* Fondo claro y suave */
-    color: #333;  /* Texto oscuro para buen contraste */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     margin: 0;
     padding: 0;
 }
@@ -11,25 +11,153 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #FF4081;  /* Color vibrante pero agradable */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    justify-content: space-between;
+    background: linear-gradient(90deg, #FF6B81, #FF4081);
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Estilo del logo */
 header img {
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
-    border-radius: 50%;  /* Bordes redondeados para un toque elegante */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
 }
 
-/* Estilo del título */
+header img:hover {
+    transform: rotate(360deg);
+}
+
 header h1 {
-    font-size: 36px;
     color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    letter-spacing: 2px;  /* Espacio entre letras */
+    transition: color 0.3s ease;
+}
+
+header h1:hover {
+    color: #FFD700;  /* Cambia a un dorado llamativo en hover */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFD700;  /* Color dorado en hover */
+}
+
+/* Estilo de secciones */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Sección de productos */
+.catalogo h2,
+.servicios h2,
+.contacto h2 {
+    font-size: 28px;
+    color: #FF4081;
+    margin-bottom: 40px;
+}
+
+.catalogo .producto {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalogo .producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.catalogo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.catalogo h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+/* Sección de servicios */
+.servicios p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#ubicacion iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    border: none;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Formulario de contacto */
+#form-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-contacto input,
+#form-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#form-contacto button {
+    padding: 15px;
+    background-color: #FF4081;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-contacto button:hover {
+    background-color: #FF6B81;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Animaciones de fondo */
+body:hover {
+    background-color: #e3f2fd;
 }

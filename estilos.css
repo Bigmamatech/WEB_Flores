@@ -14,7 +14,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: #1a1a1a;
-    padding: 20px 40px;
+    padding: 10px 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     position: sticky;
     top: 0;
@@ -24,8 +24,8 @@ header {
 
 /* Estilo del logo */
 header img {
-    width: 70px;
-    height: 70px;
+    width: 60px; /* Ajustado para ser más pequeño en móviles */
+    height: 60px; /* Ajustado para ser más pequeño en móviles */
     border-radius: 50%;
     transition: transform 0.4s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -39,7 +39,7 @@ header img:hover {
 header h1 {
     color: #FFCC66;
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
+    font-size: 24px; /* Ajustado para ser más pequeño en móviles */
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -47,13 +47,14 @@ header h1 {
 /* Estilo del menú de navegación */
 nav {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan en móviles */
 }
 
 nav a {
     color: #FFFFFF;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
@@ -81,7 +82,7 @@ nav a:hover::after {
 
 /* Estilo de secciones */
 section {
-    padding: 60px 20px;
+    padding: 30px 20px; /* Ajustado para ser más compacto en móviles */
     text-align: center;
 }
 
@@ -89,25 +90,25 @@ section {
 .catalogo h2,
 .servicios h2,
 .contacto h2 {
-    font-size: 28px;
+    font-size: 24px; /* Ajustado para ser más pequeño en móviles */
     color: #1a1a1a;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reducido para móviles */
 }
 
 /* Estilo de productos */
 .catalogo .producto {
     display: inline-block;
-    width: 30%;
-    margin: 15px;
+    width: 45%; /* Ajustado para dos productos por fila en móviles */
+    margin: 10px 2.5%; /* Margen para espaciado */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 10px; /* Reducido para móviles */
     border-radius: 10px;
     background-color: #FFFFFF;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .catalogo .producto:hover {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Efecto de escalado más suave */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -120,14 +121,14 @@ section {
 
 /* Títulos de productos */
 .catalogo h3 {
-    font-size: 22px;
+    font-size: 20px; /* Ajustado para ser más pequeño en móviles */
     margin-bottom: 5px;
     color: #E74C3C;
 }
 
 /* Estilo de servicios */
 .servicios p {
-    font-size: 18px;
+    font-size: 16px; /* Ajustado para ser más pequeño en móviles */
     line-height: 1.6;
     margin-bottom: 20px;
     color: #555;
@@ -136,8 +137,8 @@ section {
 /* Estilo del mapa */
 #ubicacion iframe {
     width: 100%;
-    max-width: 800px;
-    height: 450px;
+    max-width: 100%; /* Asegura que no se salga del contenedor */
+    height: 300px; /* Ajustado para ser más pequeño en móviles */
     border-radius: 10px;
     border: none;
     margin: 20px auto;
@@ -145,27 +146,27 @@ section {
 
 /* Formulario de contacto */
 #form-contacto {
-    max-width: 600px;
+    max-width: 100%; /* Ajustado para ser responsivo */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px; /* Ajustado para ser más compacto */
 }
 
 #form-contacto input,
 #form-contacto textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px; /* Reducido para móviles */
     border-radius: 5px;
     border: 1px solid #ddd;
-    font-size: 16px;
+    font-size: 14px; /* Ajustado para ser más pequeño en móviles */
 }
 
 #form-contacto button {
-    padding: 15px;
+    padding: 10px; /* Reducido para móviles */
     background-color: #E74C3C;
     color: white;
-    font-size: 18px;
+    font-size: 16px; /* Ajustado para ser más pequeño en móviles */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -181,65 +182,57 @@ section {
 footer {
     background-color: #1a1a1a;
     color: white;
-    padding: 20px;
+    padding: 10px; /* Reducido para móviles */
     text-align: center;
     margin-top: 20px;
 }
 
 /* Consultas de medios para diseño responsivo */
-@media (max-width: 1024px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    .catalogo .producto {
-        width: 45%; /* Dos productos por fila */
-    }
-
-    #form-contacto {
-        flex-direction: column;
-    }
-}
-
 @media (max-width: 768px) {
     .catalogo .producto {
         width: 100%; /* Un producto por fila */
     }
 
     header img {
-        width: 50px;
-        height: 50px;
+        width: 50px; /* Más pequeño en móviles */
+        height: 50px; /* Más pequeño en móviles */
     }
 
     header h1 {
-        font-size: 20px;
+        font-size: 20px; /* Más pequeño en móviles */
     }
 
     nav {
-        justify-content: center;
-        width: 100%;
-        margin-top: 10px;
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: center; /* Centra los enlaces */
+    }
+
+    nav a {
+        padding: 10px 15px; /* Aumenta el espacio en los enlaces */
+        font-size: 16px; /* Aumenta el tamaño de fuente */
+    }
+
+    section {
+        padding: 20px; /* Ajuste de padding en móviles */
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 18px;
+        font-size: 18px; /* Más pequeño en móviles */
     }
 
     nav a {
-        padding: 8px 10px;
-        font-size: 14px;
+        padding: 8px 10px; /* Reduce el padding en móviles */
+        font-size: 14px; /* Reduce el tamaño de fuente */
     }
 
     #form-contacto input,
     #form-contacto textarea {
-        font-size: 14px;
+        font-size: 12px; /* Reduce el tamaño de fuente */
     }
 
     #form-contacto button {
-        font-size: 16px;
+        font-size: 14px; /* Ajustado para ser más pequeño en móviles */
     }
 }

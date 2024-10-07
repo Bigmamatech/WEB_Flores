@@ -1,12 +1,11 @@
 /* Estilo general */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%); /* Fondo suave y atractivo */
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
     color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    transition: background 0.5s ease; /* Transición suave para el fondo */
 }
 
 /* Estilo del header */
@@ -14,42 +13,41 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1a1a1a; /* Color oscuro para el header */
+    background: #1a1a1a;
     padding: 20px 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-radius: 0 0 20px 20px; /* Bordes redondeados */
+    border-radius: 0 0 20px 20px;
 }
 
 /* Estilo del logo */
 header img {
     width: 70px;
     height: 70px;
-    border-radius: 50%; /* Forma circular */
+    border-radius: 50%;
     transition: transform 0.4s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 header img:hover {
-    transform: rotate(360deg) scale(1.1); /* Efecto dinámico al pasar el mouse */
+    transform: rotate(360deg) scale(1.1);
 }
 
 /* Estilo del título */
 header h1 {
-    color: #FFCC66; /* Color amarillo suave */
+    color: #FFCC66;
     font-family: 'Playfair Display', serif;
     font-size: 30px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: color 0.3s ease;
 }
 
 /* Estilo del menú de navegación */
 nav {
     display: flex;
-    gap: 20px; /* Espaciado entre enlaces */
+    gap: 20px;
 }
 
 nav a {
@@ -66,26 +64,25 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    background: #FFCC66; /* Color de subrayado */
+    background: #FFCC66;
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease;
 }
 
 nav a:hover {
-    background-color: rgba(255, 204, 102, 0.5); /* Fondo suave al pasar el mouse */
-    color: #1a1a1a; /* Color oscuro en hover */
+    background-color: rgba(255, 204, 102, 0.5);
+    color: #1a1a1a;
 }
 
 nav a:hover::after {
-    width: 100%; /* Expande el subrayado en hover */
+    width: 100%;
 }
 
 /* Estilo de secciones */
 section {
     padding: 60px 20px;
     text-align: center;
-    position: relative;
 }
 
 /* Sección de productos */
@@ -93,15 +90,8 @@ section {
 .servicios h2,
 .contacto h2 {
     font-size: 28px;
-    color: #1a1a1a; /* Color oscuro */
+    color: #1a1a1a;
     margin-bottom: 40px;
-    transition: transform 0.3s ease;
-}
-
-.catalogo h2:hover,
-.servicios h2:hover,
-.contacto h2:hover {
-    transform: translateY(-5px); /* Efecto de elevación */
 }
 
 /* Estilo de productos */
@@ -112,12 +102,12 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 10px;
-    background-color: #FFFFFF; /* Fondo blanco para los productos */
+    background-color: #FFFFFF;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .catalogo .producto:hover {
-    transform: scale(1.1); /* Aumento de escala al pasar el mouse */
+    transform: scale(1.1);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -132,7 +122,7 @@ section {
 .catalogo h3 {
     font-size: 22px;
     margin-bottom: 5px;
-    color: #E74C3C; /* Color rojo vibrante para el título de productos */
+    color: #E74C3C;
 }
 
 /* Estilo de servicios */
@@ -151,12 +141,6 @@ section {
     border-radius: 10px;
     border: none;
     margin: 20px auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-#ubicacion iframe:hover {
-    transform: scale(1.02); /* Efecto de aumento en hover */
 }
 
 /* Formulario de contacto */
@@ -175,17 +159,11 @@ section {
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-#form-contacto input:focus,
-#form-contacto textarea:focus {
-    border-color: #E74C3C; /* Borde rojo en enfoque */
 }
 
 #form-contacto button {
     padding: 15px;
-    background-color: #E74C3C; /* Color rojo vibrante para botones */
+    background-color: #E74C3C;
     color: white;
     font-size: 18px;
     border: none;
@@ -195,54 +173,73 @@ section {
 }
 
 #form-contacto button:hover {
-    background-color: #C0392B; /* Color más oscuro en hover */
-    transform: scale(1.05); /* Aumento de escala en hover */
+    background-color: #C0392B;
+    transform: scale(1.05);
 }
 
 /* Estilo del footer */
 footer {
-    background-color: #1a1a1a; /* Fondo oscuro */
+    background-color: #1a1a1a;
     color: white;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Animaciones de fondo */
-body:hover {
-    background: linear-gradient(135deg, #d9e2ec 0%, #f0f4f8 100%); /* Cambio de fondo sutil */
-}
+/* Consultas de medios para diseño responsivo */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
 
-/* Efecto de desplazamiento suave */
-html {
-    scroll-behavior: smooth; /* Desplazamiento suave */
-}
+    .catalogo .producto {
+        width: 45%; /* Dos productos por fila */
+    }
 
-/* Animaciones de carga */
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    #form-contacto {
+        flex-direction: column;
     }
 }
 
-.catalogo .producto {
-    animation: slideIn 0.5s forwards;
+@media (max-width: 768px) {
+    .catalogo .producto {
+        width: 100%; /* Un producto por fila */
+    }
+
+    header img {
+        width: 50px;
+        height: 50px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    #form-contacto input,
+    #form-contacto textarea {
+        font-size: 14px;
+    }
+
+    #form-contacto button {
+        font-size: 16px;
     }
 }

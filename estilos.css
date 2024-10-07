@@ -1,12 +1,12 @@
 /* Estilo general */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #eaf2f8 0%, #d1e9f5 100%);  /* Fondo degradado claro */
-    color: #2C3E50;  /* Color de texto más oscuro */
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%); /* Fondo suave y atractivo */
+    color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1.6;  /* Mejorar la legibilidad */
-    transition: background 0.5s ease;  /* Transición suave para el fondo */
+    line-height: 1.6;
+    transition: background 0.5s ease; /* Transición suave para el fondo */
 }
 
 /* Estilo del header */
@@ -14,55 +14,71 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #34495E;  /* Color oscuro */
+    background: #1a1a1a; /* Color oscuro para el header */
     padding: 20px 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-radius: 0 0 20px 20px;  /* Bordes redondeados en la parte inferior */
+    border-radius: 0 0 20px 20px; /* Bordes redondeados */
 }
 
 /* Estilo del logo */
 header img {
-    width: 70px;  /* Aumento de tamaño */
+    width: 70px;
     height: 70px;
-    border-radius: 50%;  /* Forma circular */
-    transition: transform 0.4s ease;  /* Transición suave */
+    border-radius: 50%; /* Forma circular */
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
 }
 
 header img:hover {
-    transform: rotate(360deg);  /* Rotación dinámica al pasar el mouse */
+    transform: rotate(360deg) scale(1.1); /* Efecto dinámico al pasar el mouse */
 }
 
 /* Estilo del título */
 header h1 {
-    color: white;
+    color: #FFCC66; /* Color amarillo suave */
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 30px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
-header h1:hover {
-    color: #AAB7C5;  /* Cambia a un gris claro en hover */
+/* Estilo del menú de navegación */
+nav {
+    display: flex;
+    gap: 20px; /* Espaciado entre enlaces */
 }
 
-/* Estilo del menú de navegación */
 nav a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;  /* Añadir efecto de transformación */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FFCC66; /* Color de subrayado */
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.3);  /* Fondo suave en hover */
-    color: #AAB7C5;  /* Color gris claro en hover */
+    background-color: rgba(255, 204, 102, 0.5); /* Fondo suave al pasar el mouse */
+    color: #1a1a1a; /* Color oscuro en hover */
+}
+
+nav a:hover::after {
+    width: 100%; /* Expande el subrayado en hover */
 }
 
 /* Estilo de secciones */
@@ -76,16 +92,16 @@ section {
 .catalogo h2,
 .servicios h2,
 .contacto h2 {
-    font-size: 26px;
-    color: #2C3E50;  /* Color azul oscuro */
+    font-size: 28px;
+    color: #1a1a1a; /* Color oscuro */
     margin-bottom: 40px;
-    transition: transform 0.3s ease;  /* Efecto de transformación */
+    transition: transform 0.3s ease;
 }
 
 .catalogo h2:hover,
 .servicios h2:hover,
 .contacto h2:hover {
-    transform: translateY(-5px);  /* Leve elevación al pasar el mouse */
+    transform: translateY(-5px); /* Efecto de elevación */
 }
 
 /* Estilo de productos */
@@ -93,16 +109,16 @@ section {
     display: inline-block;
     width: 30%;
     margin: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 10px;
-    background-color: white;
+    background-color: #FFFFFF; /* Fondo blanco para los productos */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .catalogo .producto:hover {
-    transform: scale(1.05);  /* Aumento de escala */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.1); /* Aumento de escala al pasar el mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .catalogo img {
@@ -114,8 +130,9 @@ section {
 
 /* Títulos de productos */
 .catalogo h3 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 5px;
+    color: #E74C3C; /* Color rojo vibrante para el título de productos */
 }
 
 /* Estilo de servicios */
@@ -123,7 +140,7 @@ section {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #555;  /* Texto más suave */
+    color: #555;
 }
 
 /* Estilo del mapa */
@@ -135,11 +152,11 @@ section {
     border: none;
     margin: 20px auto;
     display: block;
-    transition: transform 0.3s ease;  /* Transición suave */
+    transition: transform 0.3s ease;
 }
 
 #ubicacion iframe:hover {
-    transform: scale(1.02);  /* Efecto de aumento en hover */
+    transform: scale(1.02); /* Efecto de aumento en hover */
 }
 
 /* Formulario de contacto */
@@ -163,12 +180,12 @@ section {
 
 #form-contacto input:focus,
 #form-contacto textarea:focus {
-    border-color: #2C3E50;  /* Borde azul oscuro en enfoque */
+    border-color: #E74C3C; /* Borde rojo en enfoque */
 }
 
 #form-contacto button {
     padding: 15px;
-    background-color: #2C3E50;
+    background-color: #E74C3C; /* Color rojo vibrante para botones */
     color: white;
     font-size: 18px;
     border: none;
@@ -178,25 +195,54 @@ section {
 }
 
 #form-contacto button:hover {
-    background-color: #34495E;  /* Color más claro en hover */
-    transform: scale(1.05);  /* Aumento de escala en hover */
+    background-color: #C0392B; /* Color más oscuro en hover */
+    transform: scale(1.05); /* Aumento de escala en hover */
 }
 
 /* Estilo del footer */
 footer {
-    background-color: #333;
+    background-color: #1a1a1a; /* Fondo oscuro */
     color: white;
     padding: 20px;
     text-align: center;
-    margin-top: 20px;  /* Espaciado superior */
+    margin-top: 20px;
 }
 
 /* Animaciones de fondo */
 body:hover {
-    background: linear-gradient(135deg, #eaf2f8 0%, #c4e3f4 100%);  /* Cambio de fondo más sutil */
+    background: linear-gradient(135deg, #d9e2ec 0%, #f0f4f8 100%); /* Cambio de fondo sutil */
 }
 
 /* Efecto de desplazamiento suave */
 html {
-    scroll-behavior: smooth;  /* Desplazamiento suave */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+/* Animaciones de carga */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.catalogo .producto {
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
